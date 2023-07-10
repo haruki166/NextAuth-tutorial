@@ -16,8 +16,9 @@ const Home: CustomNextPage = () => {
         <link rel="icon" href="" />
       </Head>
       <main>
-        {" "}
+        {/* ユーザーが存在しなければSignInボタン表示 */}
         {data?.user?.name || <Link href="/auth/signin">SignIn</Link>}
+        {/* 認証情報がauthenticatedならログアウトボタン追加 */}
         {status === "authenticated" && (
           <button className="ml-5" onClick={() => signOut()}>
             SignOut
