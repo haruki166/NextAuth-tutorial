@@ -7,7 +7,7 @@ import React, { useEffect } from "react";
 const AuthGuard = ({ children }: { children: React.ReactNode }): any => {
   // status には、authenticated・unauthenticated・loading のいずれかが格納されます
   const { status } = useSession(); //認証セッションのステータスを取得
-  const router = useRouter();  Next.jsのルーターオブジェクトを取得;
+  const router = useRouter();  //Next.jsのルーターオブジェクトを取得;
 
   //router（=ページ）もしくは status（=認証情報）に変更があった場合useEffect発火
   useEffect(() => {
